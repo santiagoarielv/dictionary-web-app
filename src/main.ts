@@ -1,7 +1,8 @@
 import { setupDarkModeToggle } from "./dark-mode";
-import { setupTheme } from "./theme";
-import "./style.css";
 import { setupDictionary } from "./dictionary";
+import { setupTheme } from "./theme";
+
+import "./style.css";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div class="mx-auto max-w-[51rem] px-10 py-14 max-md:p-5">
@@ -45,17 +46,17 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       <input
         type="search"
         name="search"
-        class="block py-2 px-3 w-full z-20 font-semibold bg-transparent max-md:py-3.5 placeholder:text-gray-600 dark:placeholder:text-gray-400"
+        class="block py-2 px-3 w-full z-20 font-semibold bg-transparent max-md:py-0.5 placeholder:text-gray-600 dark:placeholder:text-gray-400"
         placeholder="Search for a word..."
         required
       />
     </label>
-    <button type="submit" class="py-5 px-6 max-md:py-3.5">
+    <button type="submit" class="py-5 px-6 max-md:py-0.5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        class="w-5 h-5 text-purple-600"
+        class="w-5 h-5 text-purple-500"
       >
         <path
           fill-rule="evenodd"

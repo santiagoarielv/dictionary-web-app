@@ -3,7 +3,7 @@ export const setupTheme = (element: HTMLSelectElement) => {
   element.value = font;
 
   const onChange = () => {
-    document.documentElement.style.setProperty(
+    document.body.style.setProperty(
       "--font",
       ["Roboto", element.value].join(", ")
     );

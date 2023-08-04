@@ -45,7 +45,7 @@ export const setupDictionary = (element: HTMLElement) => {
       ${word.meanings.map(mearnings).join("")}
       <hr class="w-full mt-12 mb-3" />
       <section class="flex text-base gap-1.5 flex-wrap">
-        <p class="text-zinc-500">Source</p>
+        <p class="text-zinc-500 dark:text-zinc-400">Source</p>
         <ul class="overflow-hidden">
         ${word.sourceUrls.map(source)}
         </ul>
@@ -67,7 +67,11 @@ export const setupDictionary = (element: HTMLElement) => {
     return `
     <li class="pl-2">
       <p>${definition}</p>
-      ${example ? `<q class="md:text-lg text-zinc-500">${example}</q>` : ""}
+      ${
+        example
+          ? `<q class="md:text-lg text-zinc-500 dark:text-zinc-400">${example}</q>`
+          : ""
+      }
       ${synonyms ? `<p>${synonyms.join(", ")}</p>` : ""}
     </li>
   `;
@@ -110,10 +114,10 @@ export const setupDictionary = (element: HTMLElement) => {
     return synonyms.length > 0
       ? `
     <section class="mt-12 flex flex-wrap max-lg:mt-5">
-      <h3 class="text-xl leading-loose font-normal max-md:text-lg text-zinc-500">
+      <h3 class="text-xl leading-loose font-normal max-md:text-lg text-zinc-500 dark:text-zinc-400">
         Synonyms
       </h3>
-      <ul class="flex flex-wrap font-semibold mt-2 ml-2 text-xl tracking-wide max-md:text-base text-purple-600">
+      <ul class="flex flex-wrap font-semibold mt-2 ml-2 text-xl tracking-wide max-md:text-base dark:text-purple-500 text-purple-600">
         ${synonyms
           .map(
             (synonym) =>
@@ -135,10 +139,10 @@ export const setupDictionary = (element: HTMLElement) => {
       </span>
     </div>
     <section>
-      <h3 class="text-xl leading-loose font-normal max-md:text-lg text-zinc-500">
+      <h3 class="text-xl leading-loose font-normal max-md:text-lg text-zinc-500 dark:text-zinc-400">
         Meaning
       </h3>
-      <ul class="my-4 ml-10 list-disc space-y-1 text-[19px] marker:text-base max-md:ml-5 max-md:text-base max-md:my-3 max-md:space-y-3 marker:text-purple-600">
+      <ul class="my-4 ml-10 list-disc space-y-1 text-[19px] marker:text-base max-md:ml-5 max-md:text-base max-md:my-3 max-md:space-y-3 marker:text-purple-500">
         ${meaning.definitions.map(definition).join("")}
       </ul>
     </section>
@@ -153,12 +157,12 @@ export const setupDictionary = (element: HTMLElement) => {
         <h1 class="leading-tight text-[4rem] font-serif tracking-wider max-md:text-[2rem]">
           ${word}
         </h1>
-        <h2 class="text-2xl tracking-tighter max-md:text-xl text-purple-600">
+        <h2 class="text-2xl tracking-tighter max-md:text-xl dark:text-purple-500 text-purple-600">
           ${phonetic}
         </h2>
       </div>
       <div>
-        <button class="p-7 rounded-full max-md:p-3.5 bg-purple-600/20 text-purple-600">
+        <button aria-label="speak" class="p-7 rounded-full max-md:p-3.5 bg-purple-600/20 text-purple-500 dark:bg-purple-500/30">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
