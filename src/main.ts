@@ -8,7 +8,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div class="mx-auto max-w-[51rem] px-10 py-14 max-md:p-5">
   <header class="flex">
     <a href="#">
-      <img src="/wordbook.svg" alt="logo" class="w-8 h-10" />
+      <img src="wordbook.svg" alt="logo" class="w-8 h-10" />
     </a>
     <div class="grow"></div>
     <div class="flex gap-5 items-center">
@@ -28,13 +28,13 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
         ></div>
         <img
           class="w-6 h-6 peer-checked:hidden"
-          src="/icons/moon.svg"
+          src="icons/moon.svg"
           alt="moon icon"
           loading="lazy"
         />
         <img
           class="w-6 h-6 hidden peer-checked:inline-block invert"
-          src="/icons/sun.svg"
+          src="icons/sun.svg"
           alt="sun icon"
           loading="lazy"
         />
