@@ -28,13 +28,13 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
         ></div>
         <img
           class="w-6 h-6 peer-checked:hidden"
-          src="/moon.svg"
+          src="/icons/moon.svg"
           alt="moon icon"
           loading="lazy"
         />
         <img
           class="w-6 h-6 hidden peer-checked:inline-block invert"
-          src="/sun.svg"
+          src="/icons/sun.svg"
           alt="sun icon"
           loading="lazy"
         />
