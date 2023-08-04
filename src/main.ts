@@ -10,7 +10,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </a>
     <div class="grow"></div>
     <div class="flex gap-5 items-center">
-      <select id="font-select" class="capitalize font-semibold px-1 bg-transparent">
+      <select id="font-select" class="capitalize font-semibold px-1 bg-transparent placeholder-red-500 dark:bg-black">
         <option value="sans-serif">sans</option>
         <option value="serif">serif</option>
         <option value="monospace">mono</option>
@@ -35,12 +35,14 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </div>
   </header>
   <form class="flex mt-12 rounded-xl max-md:mt-5 bg-gray-100 dark:bg-zinc-800">
-    <input
+    <label class="w-full p-3">
+      <input
       type="search"
-      class="block py-5 px-6 w-full z-20 font-semibold bg-transparent max-md:py-3.5 placeholder:text-gray-600 dark:placeholder:text-gray-400"
+      class="block py-2 px-3 w-full z-20 font-semibold bg-transparent max-md:py-3.5 placeholder:text-gray-600 dark:placeholder:text-gray-400"
       placeholder="Search for a word..."
       required
-    />
+      />
+    </label>
     <button type="submit" class="py-5 px-6 max-md:py-3.5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
