@@ -1,6 +1,7 @@
 {
   "name": "dictionary-web-app",
   "private": true,
+  "homepage": "https://santiagoarielv.github.io/dictionary-web-app/",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
