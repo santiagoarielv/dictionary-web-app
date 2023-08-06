@@ -6,7 +6,7 @@ export const setupDarkModeToggle = (element: HTMLInputElement) => {
   element.checked = darkModeOn;
 
   const onChange = () => {
-    document.body.classList.toggle("dark", element.checked);
+    document.documentElement.classList.toggle("dark", element.checked);
     localStorage.theme = element.checked ? "dark" : "light";
   };
 

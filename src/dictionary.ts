@@ -117,14 +117,14 @@ export const setupDictionary = (element: HTMLElement) => {
       <h3 class="text-xl leading-loose font-normal max-md:text-lg text-zinc-500 dark:text-zinc-400">
         Synonyms
       </h3>
-      <ul class="flex flex-wrap font-semibold mt-2 ml-2 text-xl tracking-wide max-md:text-base dark:text-purple-500 text-purple-600">
+      <div class="flex flex-wrap font-semibold mt-2 ml-2 text-xl tracking-wide max-md:text-base dark:text-purple-500 text-purple-600">
         ${synonyms
           .map(
             (synonym) =>
-              `<li class="pl-2 max-lg:pl-5 max-md:pl-4">${synonym}</li>`
+              `<span class="pl-2 max-lg:pl-5 max-md:pl-4">${synonym}</span>`
           )
-          .join(", ")}
-      </ul>
+          .join("")}
+      </div>
     </section>
   `
       : "";
